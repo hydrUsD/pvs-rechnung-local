@@ -1,0 +1,110 @@
+// Styles extracted for stoerer_rechnung_no_acc.scss
+// Specifically for the non-account stoerer (notification/alert) box on the invoice/bill page
+
+#stoerer-rechnung-no-acc {
+  position: absolute;
+  top: 280px;
+  right: 20px;
+  width: 400px;
+  border-radius: 4px;
+  background-color: #fdc41f;
+  z-index: 100;
+
+  div {
+    #stoerer-header {
+      border-bottom: dashed 1px #fffd58;
+      letter-spacing: 0.1em;
+      padding: 10px;
+      margin-bottom: 0px;
+    }
+
+    #stoerer-body {
+      #reg-anmelden {
+        padding-top: 16px;
+        border-right: dashed 1px #fffd58;
+      }
+
+      #qr {
+        padding-top: 16px;
+        padding-left: 16px;
+
+        img {
+          width: 100px;
+        }
+      }
+
+      #bankeinzug {
+        padding-top: 10px;
+        border-radius: 0px 0px 0px 4px;
+        background-color: #FEE18F;
+        border-top: solid 1px #e3aa05;
+        font-size: inherit;
+
+        span.text-right-angle-bracket {
+          color: #0467b3;
+        }
+      }
+
+      span#stoerer-mahnung {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        font-size: 85%;
+        background-color: #8d8326;
+        color: white;
+        font-weight: bold;
+        border-radius: 50%;
+        margin-right: 8px;
+        margin-left: 4px;
+      }
+
+      .help-block {
+        font-size: small;
+      }
+    }
+
+    #stoerer-footer {
+      border-top: solid 1px #e3aa05;
+
+      div {
+        padding: 0;
+
+        &:not(:last-child) {
+          border-right: solid 2px white;
+        }
+      }
+
+      button {
+        background-color: rgba(255, 255, 255, 0.5);
+        font-size: inherit;
+        letter-spacing: 0.02em;
+
+        span#stoerer-mahnung {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          font-size: 85%;
+          background-color: #8d8326;
+          color: white;
+          font-weight: bold;
+          border-radius: 50%;
+          margin-right: 8px;
+          margin-left: 4px;
+        }
+
+        span.text-right-angle-bracket {
+          color: #0467b3;
+          margin-right: -5px;
+        }
+      }
+
+      :first-child button {
+        border-radius: 0px 0px 0px 4px;
+      }
+
+      :last-child button {
+        border-radius: 0px 0px 4px 0px;
+      }
+    }
+  }
+}

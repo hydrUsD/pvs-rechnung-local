@@ -1,0 +1,17 @@
+// Styles extracted for _content-banderole.scss
+
+#antworten-banderole {
+  position: relative;
+
+  > div {
+    border-bottom: 1px solid white;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    font-size: 1.1em;
+    letter-spcing: 0.025em;
+
+    &#arzt {
+      font-style: italic;
+    }
+  }
+}

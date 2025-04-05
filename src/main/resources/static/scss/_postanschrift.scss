@@ -1,0 +1,58 @@
+// Styles extracted for _postanschrift.scss
+
+#postanschrift {
+  #white-background {
+    background-color: white;
+    padding-top: 6px;
+    padding-bottom: 30px;
+
+    #gray-background {
+      background-color: rgba(231, 230, 230, 0.6);
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      #zustimmung {
+        margin-bottom: 10px;
+        font-family: arial;
+      }
+
+      .bitte {
+        text-align: right;
+        font-family: arial;
+      }
+
+      #mandant_name {
+        color: #848C93;
+      }
+
+      #adressdaten {
+        border-left: 1px solid #C0C7CD;
+        font-size: 1.08em;
+      }
+
+      a {
+        cursor: pointer;
+      }
+
+      #back-link {
+        display: block;
+        width: 90px;
+        margin: 0 auto;
+        background-color: white;
+        border: medium none;
+        margin-top: 1.5em;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #postanschrift #white-background #gray-background .bitte {
+    text-align: left;
+  }
+}

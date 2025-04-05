@@ -1,0 +1,313 @@
+// Styles extracted for _banderole.scss
+
+#banderole {
+  box-shadow: 0px 3px 5px -2px #000;
+  position: relative;
+
+  #banderole-top {
+    position: relative;
+    height: 60px;
+    background-color: #2E68B9;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.8);
+
+    img {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      margin: 0px auto;
+      top: -80px;
+      width: auto;
+    }
+  }
+
+  #banderole-center {
+    background-color: #2E68B9;
+    min-height: 130px;
+  }
+
+  #banderole-bottom {
+    height: 70px;
+    background: rgba(0, 0, 0, 0.5);
+
+    &.noBackground {
+      background: none;
+    }
+  }
+
+  #banderole-content {
+    #kreis-wrapper {
+      height: 130px;
+      text-align: right;
+
+      img {
+        height: 192px;
+        width: auto;
+        margin-top: -30px;
+        margin-right: 40px;
+      }
+    }
+
+    #mandanten-auswahl {
+      #arzt-subtitle {
+        font-style: italic;
+      }
+
+      #pvs-auswahl {
+        position: relative;
+        height: 130px;
+        padding-left: 65px;
+
+        #pvs {
+          position: absolute;
+          top: 50%;
+          left: 0px;
+          height: 1px;
+          line-height: 1px;
+          color: white;
+          font-family: arial;
+          font-weight: bold;
+          letter-spacing: 0.022rem;
+        }
+
+        #mandanten {
+          padding-top: 26px;
+          padding-left: 16px;
+
+          .mandant {
+            width: 33.3333%;
+            float: left;
+            line-height: 26px;
+            letter-spacing: 0.032em;
+            white-space: nowrap;
+
+            a {
+              color: white;
+              position: relative;
+              padding-left: 15px;
+              display: block;
+              word-break: keep-all;
+
+              &:before {
+                content: "⟩ ";
+                font-weight: bold;
+                position: absolute;
+                left: 0px;
+              }
+            }
+          }
+        }
+      }
+
+      #login {
+        padding-top: 10px;
+        color: white;
+
+        #vorschau_wrapper {
+          position: absolute;
+          bottom: -5px;
+          left: 19px;
+
+          a {
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+
+        form {
+          position: relative;
+          margin-top: 10px;
+
+          label {
+            font-weight: normal;
+            letter-spacing: 0.02em;
+            margin-left: 4px;
+            margin-bottom: 0px;
+            color: rgba(255, 255, 255, 0.6);
+
+            > span {
+              color: rgba(255, 255, 255, 0.2);
+            }
+
+            &:hover > span {
+              color: white;
+            }
+          }
+
+          .form-group {
+            text-align: left;
+          }
+
+          input.form-control, div.input-group-addon {
+            font-family: arial;
+            border: 0px;
+            text-align: center;
+          }
+
+          label.control-label,
+          label.control-label > span {
+            color: orange;
+          }
+        }
+      }
+
+      #rechnungsanzeige {
+        padding-top: 10px;
+        color: #44505B;
+        padding-right: 135px;
+        position: relative;
+
+        #banderole-qrcode {
+          position: absolute;
+          right: 0px;
+          top: 15px;
+          z-index: 1;
+
+          #qrcode-wrapper {
+            #qrcode {
+              margin-bottom: 10px;
+            }
+
+            #qrcode-link {
+              position: relative;
+              top: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#rechnung #banderole {
+  box-shadow: 0px -3px 5px -2px #000;
+
+  #banderole-top {
+    background: #EAE9E9;
+    border-bottom: 0px;
+  }
+
+  #banderole-center {
+    background: #EAE9E9;
+    border-bottom: 1px dashed #A4B0B8;
+  }
+
+  #banderole-bottom {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  #rechnung #banderole #banderole-center {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 991px) {
+  #banderole {
+    #banderole-content {
+      #mandanten-auswahl {
+        #pvs-auswahl {
+          width: 550px;
+          margin-left: auto;
+          margin-right: auto;
+
+          #mandanten {
+            .mandant {
+              width: 40%;
+
+              &:nth-child(3n) {
+                width: 20%;
+              }
+            }
+          }
+        }
+
+        #login, #rechnungsanzeige {
+          padding-top: 20px;
+          text-align: center;
+
+          #vorschau_wrapper {
+            left: 170px;
+          }
+        }
+
+        #rechnungsanzeige {
+          padding-right: 0px;
+          padding-bottom: 10px;
+
+          #banderole-qrcode {
+            position: static;
+            margin-top: 20px;
+            margin-bottom: 0;
+
+            #qrcode-wrapper {
+              position: static;
+
+              #qrcode {
+                margin: 0 auto 10px auto;
+                display: inline-block;
+                width: 120px;
+                height: 120px;
+
+                #qrcode-link {
+                  top: 0px;
+                  line-height: 1em;
+                  margin-bottom: 10px;
+                  background-color: red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #rechnung #banderole #banderole-center {
+    border-bottom: 1px dashed #A4B0B8;
+  }
+}
+
+@media (max-width: 767px) {
+  #portal #banderole {
+    #banderole-top {
+      background: transparent;
+      border-bottom: 0px;
+      height: 1px;
+    }
+
+    #banderole-center {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 991px) and (min-width: 525px) {
+  #banderole #banderole.original #banderole-top.noBackground img {
+    top: -220px;
+    height: 190px;
+    width: auto;
+  }
+}
+
+@media (max-width: 525px) {
+  #banderole #banderole.original #banderole-top.noBackground img {
+    top: -180px;
+  }
+}
+
+// Extracted from other areas of the CSS that reference the banderole
+#antworten-banderole {
+  position: relative;
+
+  > div {
+    border-bottom: 1px solid white;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    font-size: 1.1em;
+    letter-spcing: 0.025em;
+
+    &#arzt {
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+// Styles extracted for _hotline-include.scss
+
+#hotline-include {
+  #mandanten-liste {
+    margin-top: 16px;
+
+    .row {
+      margin-top: 30px;
+      margin-bottom: 25px;
+
+      .hotline-tag {
+        letter-spacing: 0.1em;
+        margin-bottom: 0px;
+        line-height: 1em;
+      }
+
+      .hotline-nummer {
+        line-height: 0.9em;
+        position: relative;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+
+      .business-hours {
+        font-style: italic;
+        line-height: 1em;
+      }
+
+      .mandant-name {
+        margin-bottom: 0px;
+        color: black;
+      }
+    }
+  }
+
+  #einzel-mandant {
+    width: 320px;
+    margin: 0 auto;
+
+    div {
+      padding-left: 80px;
+      margin: 0px;
+    }
+
+    #hotline-tag {
+      letter-spacing: 0.1em;
+      line-height: 1.1em;
+    }
+
+    #hotline-nummer {
+      line-height: 0.9em;
+      margin-bottom: 5px;
+      position: relative;
+    }
+
+    #phone-logo {
+      position: absolute;
+      left: 14px;
+    }
+
+    .business-hours {
+      padding-left: 80px;
+      font-style: italic;
+      line-height: 1em;
+    }
+
+    #mandant-name {
+      margin-bottom: 10px;
+    }
+
+    #rueckrufwunsch-link {
+      padding-left: 80px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #hotline-include {
+    #mandanten-liste {
+      width: 100%;
+
+      .center-wrapper {
+        width: 320px;
+        margin: 10 auto 25 auto;
+
+        .mandant-name {
+          /* 					padding-left: 80px; */
+          margin-bottom: 0px;
+          line-height: 1em;
+        }
+
+        .hotline-tag {
+          line-height: 1em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// Styles extracted for _versicherung-link.scss
+#versicherung-link {
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: 23px;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 2em;
+
+    #zeile {
+      margin: 0 auto;
+      max-width: 360px;
+      color: black;
+      letter-spacing: 0.025em;
+      display: block;
+      height: 2em;
+      line-height: 2em;
+      position: relative;
+      padding-left: 16px;
+      padding-right: 16px;
+
+      span {
+        position: absolute;
+        right: 15px;
+      }
+    }
+  }
+}

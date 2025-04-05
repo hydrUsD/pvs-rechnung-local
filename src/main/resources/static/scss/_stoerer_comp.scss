@@ -1,0 +1,164 @@
+// Styles extracted for _stoerer_comp.scss
+
+.stoerer_comp {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: auto;
+  border-radius: 4px;
+  background-color: #fdc41f;
+  z-index: 100;
+
+  @media (max-width: 991px) {
+    inset: 0;
+    justify-content: space-evenly;
+    border-radius: 0;
+
+    > .container-fluid {
+      margin: 0px;
+    }
+  }
+
+  #stoerer-rechnung {
+    display: flex;
+    position: relative;
+    height: 100%;
+
+    > .container-fluid {
+      display: flex;
+      flex-direction: column;
+      border-right: solid 1px #e3aa05;
+      flex: 1 1;
+
+      #stoerer-header {
+        border-bottom: dashed 1px #fffd58;
+        letter-spacing: 0.1em;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      #stoerer-body {
+        display: flex;
+        flex: 1 1;
+
+        #qrcode {
+          margin: auto;
+        }
+      }
+
+      #stoerer-footer {
+        display: flex;
+        border-top: solid 1px #e3aa05;
+
+        #bankeinzug {
+          border-radius: 0px 0px 4px 4px;
+          background-color: #FEE18F;
+          border-top: solid 1px #e3aa05;
+          font-size: inherit;
+          width: 100%;
+
+          span.text-right-angle-bracket {
+            color: #0467b3;
+          }
+        }
+
+        span#stoerer-mahnung {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          font-size: 85%;
+          background-color: #8d8326;
+          color: white;
+          font-weight: bold;
+          border-radius: 50%;
+          margin-right: 8px;
+          margin-left: 4px;
+        }
+      }
+    }
+
+    #qrcode-wrapper {
+      margin: 1rem;
+      width: 120px;
+
+      #qrcode-titel {
+        margin: 0;
+      }
+
+      #qrcode-link {
+        position: relative;
+        top: 0px;
+      }
+    }
+  }
+
+  #stoerer-mandant {
+    display: flex;
+    position: relative;
+    width: 400px;
+    height: 100%;
+
+    @media (max-width: 991px) {
+      width: auto;
+    }
+
+    div {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+
+      #stoerer-header {
+        border-bottom: dashed 1px #fffd58;
+        letter-spacing: 0.1em;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      #stoerer-body {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex: 1 1;
+      }
+
+      #stoerer-footer {
+        border-top: solid 1px #e3aa05;
+
+        div {
+          padding: 0;
+        }
+
+        button {
+          background-color: rgba(255, 255, 255, 0.5);
+          font-size: inherit;
+          letter-spacing: 0.02em;
+
+          span#stoerer-mahnung {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            font-size: 85%;
+            background-color: #8d8326;
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 8px;
+            margin-left: 4px;
+          }
+
+          span.text-right-angle-bracket {
+            color: #0467b3;
+            margin-right: -5px;
+          }
+        }
+
+        :first-child button {
+          border-radius: 0px 0px 0px 4px;
+        }
+
+        :last-child button {
+          border-radius: 0px 0px 4px 0px;
+        }
+      }
+    }
+  }
+}

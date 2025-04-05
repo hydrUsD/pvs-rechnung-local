@@ -1,0 +1,308 @@
+// Styles extracted for _themenseiten.scss
+
+#antworten #thema-head #type > h1, #unterseiten #thema-head #type > h1 {
+  position: relative;
+  border-bottom: 2px solid white;
+  font-size: 2.8em;
+  letter-spacing: 0.025em;
+  line-height: 2;
+  margin: 0;
+
+  #back-indikator {
+    position: absolute;
+    left: 16px;
+    font-weight: bolder;
+
+    .text-left-angle-bracket {
+      width: 0.5em;
+
+      &::before {
+        position: absolute;
+        right: 0px;
+        top: 0.1em;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+#antworten #thema-head #type > h2, #unterseiten #thema-head #type > h2 {
+  position: relative;
+  border-bottom: 2px solid white;
+  letter-spacing: 0.025em;
+  line-height: 2;
+  margin: 0;
+
+  #back-indikator {
+    position: absolute;
+    left: 16px;
+    font-weight: bolder;
+
+    .text-left-angle-bracket {
+      width: 0.5em;
+
+      &::before {
+        position: absolute;
+        right: 0px;
+        top: 0.1em;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+#antworten #thema-head a#type:hover, #unterseiten #thema-head a#type:hover {
+  text-decoration: none;
+}
+
+#antworten #thema-head h2#title, #unterseiten #thema-head h2#title {
+  position: relative;
+  font-size: 1.28em;
+  line-height: 1.4;
+  margin: 0px;
+  padding: 10px 16px;
+  background: #eae9e9;
+  border-bottom: 2px solid white;
+  letter-spacing: 0.025em;
+
+  .prefix-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    left: 16px;
+  }
+
+  .title-wrapper {
+    display: inline-block;
+    margin-left: 42px;
+  }
+}
+
+#antworten {
+  position: relative;
+  border-top: 5px solid white;
+
+  .vorgang_fehler_background {
+    background: rgba(231, 230, 230, 0.6);
+  }
+
+  div#thema-head {
+    background: rgba(231, 230, 230, 0.6);
+  }
+
+  div#thema-content {
+    color: #44505B;
+
+    > form > div:not(.container) {
+      margin-bottom: 80px;
+
+      > .container {
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      &:not(.thema-background) {
+        background: rgba(231, 230, 230, 0.6);
+      }
+    }
+
+    #bankname {
+      margin-top: 15px;
+    }
+
+    #anfrage .form-group {
+      border-bottom: 1px dotted #C0C7CD;
+
+      p {
+        margin-bottom: 6px;
+      }
+
+      &:last-child {
+        border-bottom: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+#antworten:not(.no-togo-submit) {
+  form {
+    margin: 0;
+    padding: 0;
+
+    button[type=submit] {
+      border-radius: 0px;
+      border: 0px;
+      position: absolute;
+      right: 17px;
+      bottom: -35px;
+      height: 35px;
+
+      &.pp-pull-button-left {
+        right: auto;
+        left: 17px;
+      }
+    }
+
+    #fehlerausgabe {
+      position: absolute;
+      left: 17px;
+      bottom: -35px;
+      height: 35px;
+
+      @media (max-width: 767px) {
+        bottom: -70px;
+      }
+    }
+  }
+}
+
+// Themenbereichsfarben für Antworten
+.togo#antworten {
+  #type,
+  #title #title-prefix,
+  .text-thema,
+  #senden-button-icon {
+    color: #2E68B9;
+  }
+
+  button[type=submit] {
+    background: #2E68B9;
+    color: white;
+
+    &:hover {
+      background: white;
+      color: #2E68B9;
+    }
+  }
+
+  .progress-bar {
+    background-color: #2E68B9;
+  }
+
+  .thema-background {
+    background: #2E68B9;
+    color: white;
+  }
+}
+
+.fragen#antworten {
+  #type,
+  #title #title-prefix,
+  .text-thema,
+  #senden-button-icon {
+    color: #FC8F37;
+  }
+
+  button[type=submit] {
+    background: #FC8F37;
+    color: white;
+
+    &:hover {
+      background: white;
+      color: #FC8F37;
+    }
+  }
+
+  .progress-bar {
+    background-color: #FC8F37;
+  }
+
+  .thema-background {
+    background: #FC8F37;
+    color: white;
+  }
+}
+
+.zahlungen#antworten {
+  #type,
+  #title #title-prefix,
+  .text-thema,
+  #senden-button-icon {
+    color: #5FB8C2;
+  }
+
+  button[type=submit] {
+    background: #5FB8C2;
+    color: white;
+
+    &:hover {
+      background: white;
+      color: #5FB8C2;
+    }
+  }
+
+  .progress-bar {
+    background-color: #5FB8C2;
+  }
+
+  .thema-background {
+    background: #5FB8C2;
+    color: white;
+  }
+}
+
+.pruefung#antworten {
+  #type,
+  #title #title-prefix,
+  .text-thema,
+  #senden-button-icon {
+    color: #92BF58;
+  }
+
+  button[type=submit] {
+    background: #92BF58;
+    color: white;
+
+    &:hover {
+      background: white;
+      color: #92BF58;
+    }
+  }
+
+  .progress-bar {
+    background-color: #92BF58;
+  }
+
+  .thema-background {
+    background: #92BF58;
+    color: white;
+  }
+}
+
+// Unterseiten Styling
+#unterseiten.postanschrift, #unterseiten.bankverbindung {
+  #type {
+    color: #2E68B9;
+  }
+}
+
+#unterseiten.impressum {
+  #type {
+    color: #848c93;
+  }
+}
+
+#antworten-banderole {
+  position: relative;
+
+  > div {
+    border-bottom: 1px solid white;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    font-size: 1.1em;
+    letter-spcing: 0.025em;
+
+    &#arzt {
+      font-style: italic;
+    }
+  }
+}

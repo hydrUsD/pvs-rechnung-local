@@ -1,0 +1,180 @@
+// Styles extracted for _header.scss
+
+/* $background-color-light: rgba(234, 233, 233, 0.7); */
+.pvs-muted {
+  color: #848C93;
+}
+
+/* depricated */
+.blue-text {
+  color: #6992C4;
+}
+
+/* depricated */
+.text-info {
+  color: #6992C4;
+}
+
+#header {
+  position: relative;
+  height: 130px;
+  border-bottom: 1.5px solid white;
+
+  > div {
+    position: absolute;
+    right: 0px;
+    bottom: 22px;
+    left: 0px;
+  }
+
+  .white-cloud {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 65%;
+    height: 0px;
+    box-shadow: -25px 0px 45px 25px #fff;
+  }
+
+  #logo-large {
+    position: absolute;
+    left: -75px; /*vorher 65px*/
+    top: 6px;
+  }
+
+  #title {
+    display: inline-block;
+
+    #text {
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+
+      #title-text {
+        position: relative;
+        margin-left: -2px;
+        font-size: 3.125rem;
+        letter-spacing: 0.11rem;
+      }
+
+      #subtitle {
+        font-family: arial;
+        font-size: 0.412em;
+        font-weight: bold;
+      }
+    }
+
+    #languages {
+      display: inline-block;
+      position: relative;
+      color: #2E68B9;
+      letter-spacing: 0.022rem;
+    }
+  }
+
+  .urheberrecht {
+    position: absolute;
+    right: 0px;
+    padding-right: 5px;
+    font-size: 0.7em;
+    text-align: right;
+  }
+
+  #urheberrecht_large {
+    bottom: 0px;
+  }
+}
+
+@media (max-width: 1199px) {
+  #urheberrecht_large {
+    bottom: -280px;
+  }
+}
+
+@media (max-width: 991px) {
+  #header {
+    height: 100px;
+    border-bottom: none;
+
+    #title-wrapper {
+      top: 5px;
+    }
+
+    > div {
+      bottom: 10px;
+    }
+
+    .col-sm-12 {
+      text-align: center;
+
+      #text {
+        margin-right: -55px;
+      }
+    }
+
+    #title {
+      text-align: left;
+    }
+
+    &.noBackground {
+      border-bottom: 1.5px solid white;
+    }
+  }
+
+  #urheberrecht_small {
+    bottom: -280px;
+  }
+}
+
+@media (max-width: 767px) {
+  #header {
+    #title-wrapper {
+      top: 10px;
+    }
+
+    .col-sm-12 #text {
+      margin-right: 0px;
+    }
+
+    #title {
+      text-align: center;
+
+      #text {
+        letter-spacing: 0.05em;
+
+        #title-text {
+          font-size: 2.125em;
+        }
+
+        #subtitle {
+          position: absolute;
+          top: -0.8em;
+          right: 0px;
+        }
+      }
+    }
+
+    #logo-small {
+      position: relative;
+      width: 33px;
+    }
+  }
+
+  .start #header {
+    margin-bottom: 200px;
+  }
+
+  #header.noBackground {
+    border-bottom: 1.5px solid white;
+  }
+
+  #urheberrecht_small {
+    bottom: -206px;
+  }
+}
+
+@media (max-width: 524px) {
+  #urheberrecht_small {
+    bottom: -175px;
+  }
+}

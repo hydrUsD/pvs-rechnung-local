@@ -1,0 +1,70 @@
+// Styles extracted for _kommunikation.scss
+// Contains styles for the message communication area
+
+#kommunikation {
+  background: white;
+  padding-bottom: 50px;
+
+  h4 {
+    letter-spacing: 0.05em;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C0C7CD;
+    margin-bottom: 0px;
+
+    @media (max-width: 767px) {
+      padding-left: 0px;
+    }
+  }
+
+  #messages {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media (max-width: 767px) {
+      padding: 0px;
+    }
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    /* tr:first-child {border-top: 1px solid $separator-color} */
+
+    td {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      vertical-align: top;
+
+      &:first-child {
+        width: 95px;
+
+        @media (max-width: 767px) {
+          width: 70px;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 85px;
+        text-align: right;
+        padding-right: 16px;
+      }
+
+      &:nth-child(3) {
+        width: 290px;
+
+        @media (max-width: 991px) {
+          width: 40px;
+        }
+      }
+
+      &:nth-child(4) {
+        width: auto;
+      }
+    }
+
+    tr {
+      border-bottom: 1px dotted #C0C7CD;
+    }
+  }
+}

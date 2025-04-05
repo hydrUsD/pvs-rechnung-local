@@ -1,0 +1,149 @@
+// Styles extracted for portal.scss
+// This file serves as the main entry point for the portal styles
+
+// Import variables
+@import "pvs_variables";
+
+// Import base styles
+@import "style";
+@import "content";
+
+// Import layout components
+@import "header";
+@import "footer";
+@import "banderole";
+@import "content-banderole";
+
+// Import UI components
+@import "themen";
+@import "themenseiten";
+@import "hotlines";
+@import "hotline-include";
+@import "kontakt";
+@import "kommunikation";
+@import "versicherung-link";
+@import "bankverbindung";
+@import "postanschrift";
+
+// Import special components
+@import "stoerer";
+@import "stoerer_comp";
+@import "stoerer_rechnung_no_acc";
+
+// Main portal specific styles
+html {
+  body > div {
+    background-color: #F8F4F4;
+    background-image: url("../patientenportal/img/background.png");
+    background-repeat: repeat-x;
+    background-position: center top;
+  }
+
+  body > div {
+    padding-bottom: 0px;
+  }
+
+  #footer {
+    position: relative;
+  }
+
+  #antworten div#thema-content > form > div:not(.container) {
+    margin-bottom: 0px;
+  }
+
+  #sprache {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 1px dotted rgba(0, 0, 0, 0.5);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+    /* border-left: 1px dotted rgba(255,255,255,0.9); */
+    /* border-bottom: 1px dotted rgba(255,255,255,0.9); */
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+
+    #de {
+      display: inline-block;
+    }
+
+    #en, #es, #fr, #nl, #pl, #uk {
+      display: none;
+    }
+
+    &:hover {
+      background-color: white;
+      border-left: 1px dotted rgba(255, 255, 255, 0.5);
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+
+      #en, #es, #fr, #nl, #pl, #uk {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// Background setup
+#background {
+  background-image: url("../patientenportal/img/background.png");
+  background-repeat: repeat-x;
+  background-position: center top;
+  background-color: #F8F4F4;
+  height: 1659px;
+}
+
+// Utility classes for layout
+.d-flex {
+  display: flex !important;
+}
+
+.d-row {
+  flex-direction: row !important;
+}
+
+.d-column {
+  flex-direction: column !important;
+}
+
+.d-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.d-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}

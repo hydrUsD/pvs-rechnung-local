@@ -1,0 +1,354 @@
+// Base styling extracted for _style.scss
+// Contains core text styles, colors, and utility classes
+
+/* $background-color-light: rgba(234, 233, 233, 0.7); */
+.pvs-muted {
+  color: #848C93;
+}
+
+/* depricated */
+.blue-text {
+  color: #6992C4;
+}
+
+/* depricated */
+.text-info {
+  color: #6992C4;
+}
+
+html {
+  height: 100%;
+  font-size: inherit;
+}
+
+body {
+  /*setzt die font-size ind line-height der Website auf die Browsereinstellungen (default 16px)*/
+  font-size: inherit;
+  height: 100%;
+  font-family: ropa sans;
+  background-color: #F8F4F4;
+}
+body a, body button {
+  cursor: pointer;
+}
+body > div {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+
+/*Inputs für den Verwendungszweck müssen die id 'rechnung_vw_zweck' erhalten, dann wird der VW-Zweck in Grossbuchstaben dargestellt.*/
+#rechnung_vw_zweck {
+  text-transform: uppercase;
+}
+
+#rechnung_vw_zweck::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  text-transform: capitalize;
+}
+
+#rechnung_vw_zweck::-moz-placeholder {
+  /* Firefox 19+ */
+  text-transform: capitalize;
+}
+
+#rechnung_vw_zweck:-ms-input-placeholder {
+  /* IE 10+ */
+  text-transform: capitalize;
+}
+
+#rechnung_vw_zweck:-moz-placeholder {
+  /* Firefox 18- */
+  text-transform: capitalize;
+}
+
+body#portal .hidden-portal {
+  display: none;
+}
+
+body#mandant .visible-portal,
+body#account .visible-portal,
+body#rechnung .visible-portal {
+  display: none;
+}
+
+body#mandant .hidden-mandant {
+  display: none;
+}
+
+body#portal .visible-mandant,
+body#account .visible-mandant,
+body#rechnung .visible-mandant {
+  display: none;
+}
+
+body#account .hidden-account {
+  display: none;
+}
+
+body#portal .visible-account,
+body#mandant .visible-account,
+body#rechnung .visible-account {
+  display: none;
+}
+
+body#rechnung .hidden-rechnung {
+  display: none;
+}
+
+body#portal .visible-rechnung,
+body#mandant .visible-rechnung,
+body#account .visible-rechnung {
+  display: none;
+}
+
+body .pvs_basis_false .visible_pvs_basis_true {
+  display: none;
+}
+
+body .pvs_basis_true .visible_pvs_basis_false {
+  display: none;
+}
+
+// Text color classes
+.text-fragen {
+  color: #FC8F37;
+}
+
+.text-zahlungen {
+  color: #5FB8C2;
+}
+
+.text-pruefung {
+  color: #92BF58;
+}
+
+.text-dark {
+  color: #44505B;
+}
+
+.text-black {
+  color: black;
+}
+
+/*Alle weiteren Angaben beziehen sich auf eine Ausgangs-Textgröße von 16px*/
+/*6px*/
+.text-themen-logos-xs {
+  font-size: 0.375rem;
+}
+
+/*14px*/
+.text-fussnote {
+  font-size: 0.875rem;
+}
+
+.text-standard {
+  font-size: 1rem;
+}
+
+/*18px*/
+.text-betont {
+  font-size: 1.125rem;
+}
+
+/*20px*/
+.text-rechnungsnummer {
+  font-size: 1.25rem;
+}
+
+/*22px*/
+.text-entity {
+  font-size: 1.375rem;
+}
+
+/*24px*/
+.text-themen-title-md {
+  font-size: 1.5rem;
+}
+
+/*28px*/
+.text-phone-number-large {
+  font-size: 1.75rem;
+}
+
+/*30px*/
+.text-kontakt-title {
+  font-size: 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .text-betont-not-xs {
+    font-size: 1.125rem;
+  }
+
+  .text-phone-number-large-not-xs {
+    font-size: 1.75rem;
+  }
+
+  .text-hotlines-title-not-xs {
+    font-size: 1.875rem;
+  }
+
+  .text-entity-not-xs {
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 767px) {
+  .text-fussnote-xs-only {
+    font-size: 0.875rem;
+  }
+
+  .text-betont-xs-only {
+    font-size: 1.125rem;
+  }
+}
+
+/* $background-color-light: rgba(234, 233, 233, 0.7); */
+.pvs-muted {
+  color: #848C93;
+}
+
+/* depricated */
+.blue-text {
+  color: #6992C4;
+}
+
+/* depricated */
+.text-info {
+  color: #6992C4;
+}
+
+// Utility flex classes
+.d-flex {
+  display: flex !important;
+}
+
+.d-row {
+  flex-direction: row !important;
+}
+
+.d-column {
+  flex-direction: column !important;
+}
+
+.d-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.d-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+// List styling
+/*Listen mit beliebigen Bulletpoints*/
+ul.list-with-bulletpoints {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 16px;
+}
+ul.list-with-bulletpoints li {
+  /* 		padding-left: 1em; */
+  position: relative;
+}
+ul.list-with-bulletpoints li .bulletpoint {
+  position: absolute;
+  left: -1em;
+}
+
+// Angle bracket classes for UI elements
+/*text-right-angle-bracket - Klasse erzeugt die Right Angle Brackets auch auf iPhones*/
+.text-right-angle-bracket {
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+.text-right-angle-bracket-slim {
+  width: 0.5em;
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+.text-right-angle-bracket::after, .text-right-angle-bracket-slim::after {
+  /* 	width: 0.5em; */
+  content: "〉";
+  display: inline-block;
+}
+
+/*text-left-angle-bracket - Klasse erzeugt die Left Angle Brackets auch auf iPhones*/
+.text-left-angle-bracket {
+  display: inline-block;
+  font-size: 0.9em;
+}
+
+.text-left-angle-bracket::before {
+  /* 	width: 0.5em; */
+  display: inline-block;
+  content: "〈";
+}
+
+// File upload table styling
+#table_fileupload {
+  width: 100%;
+}
+#table_fileupload tr.row_cloneable td {
+  padding: 5px 0;
+}
+#table_fileupload tr.row_cloneable td.file_input input[type=file] {
+  width: 100%;
+  text-align: left;
+}
+#table_fileupload tr.row_cloneable td.loeschen {
+  width: 40px;
+  display: none;
+}
+#table_fileupload tr.row_cloneable td.loeschen #span_dateien_entfernen {
+  padding-top: 9px;
+}
+#table_fileupload tr.row_cloneable td.loeschen #span_dateien_entfernen:hover > .glyphicon {
+  color: #23527c;
+}
+#table_fileupload tr:first-child td {
+  padding-top: 0px;
+}
+
+// Basic styles for adressaenderung and lists
+#adressaenderung label {
+  width: 150px;
+}
+
+ul {
+  margin-left: 16px;
+}

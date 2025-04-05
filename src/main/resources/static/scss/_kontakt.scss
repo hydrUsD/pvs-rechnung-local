@@ -1,0 +1,224 @@
+// Styles extracted for _kontakt.scss
+
+#kontakt {
+  margin-bottom: 50px;
+  position: relative;
+
+  #arzt-title, #mandant-title {
+    margin-bottom: 45px;
+  }
+
+  #kontaktdaten {
+    padding-top: 10px;
+
+    #entitywrapper {
+      #mandantenname, #arztname {
+        text-align: center;
+        padding-bottom: 23px;
+        position: relative;
+
+        #logo {
+          width: 35px;
+          height: auto;
+          margin-right: 20px;
+        }
+      }
+
+      #arztname {
+        font-style: italic;
+      }
+    }
+
+    #arzt-kontaktdaten, #mandant-kontaktdaten {
+      #hotline-sm, #hotline-xs {
+        #hotline-tag {
+          line-height: 1.1em;
+          letter-spacing: 0.1em;
+        }
+
+        #hotline-nummer {
+          line-height: 0.9em;
+          position: relative;
+        }
+
+        .business-hours {
+          font-style: italic;
+          line-height: 1em;
+        }
+
+        #weekdays, #email, #rueckrufwunsch-link {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    #mandant-kontaktdaten {
+      #hotline-sm {
+        padding-right: 40px;
+        padding-top: 8px;
+        margin-top: 12px;
+        height: 145px;
+
+        #hotline-logo {
+          position: absolute;
+          right: 0px;
+          top: -8px;
+        }
+
+        div {
+          text-align: right;
+          padding-right: 80px;
+        }
+      }
+
+      #bankdaten {
+        padding-top: 8px;
+        margin-top: 12px;
+        padding-left: 78px;
+        border-left: 1px solid #C0C7CD;
+
+        #adress1, #adress2, #bankname, #bank, .iban-kopieren, .adresse-kopieren {
+          font-size: 1.125rem;
+          /* entspricht @extend .text-betont; */
+          line-height: 1.1em;
+        }
+
+        #bankname {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+/*Die Arzt- und Rechnungs-Sicht*/
+#account #kontakt, #rechnung #kontakt {
+  #arztname {
+    margin-top: 5px;
+  }
+
+  #arzt-title {
+    margin-bottom: 0px;
+  }
+
+  #arzt-kontaktdaten {
+    #hotline-sm {
+      position: relative;
+
+      #arzt-kontakt-content {
+        padding-left: 80px;
+        width: 285px;
+        margin: 0 auto;
+        margin-bottom: 55px;
+
+        #hotline-logo {
+          position: absolute;
+          left: -80px;
+          top: -57px/2;
+          margin-top: 0px;
+        }
+
+        div {
+          text-align: left;
+        }
+
+        #hotline-tag {
+          padding-top: 10px;
+        }
+      }
+
+      /*die Links*/
+      #bankverbindung-link, #postanschrift-link {
+        width: 285px;
+        margin: 0 auto;
+        height: 42px;
+        margin-bottom: 2px;
+        display: block;
+        background-color: #2E68B9;
+        color: white;
+        height: 2.85em;
+        line-height: 2.85em;
+        margin-bottom: 2px;
+        padding-left: 16px;
+        position: relative;
+
+        .indikator {
+          position: absolute;
+          right: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #kontakt {
+    margin-bottom: 0px;
+
+    #arzt-title, #mandant-title {
+      display: none;
+    }
+
+    #entitywrapper {
+      display: none;
+    }
+
+    #kontaktdaten {
+      background-color: white;
+
+      #hotline-xs {
+        position: relative;
+
+        #content {
+          padding-bottom: 35px;
+          max-width: 360px;
+          padding-left: 80px;
+          padding-right: 16px;
+          margin: 0 auto;
+          position: relative;
+
+          #hotline-nummer #hotline-logo {
+            position: absolute;
+            top: -8px;
+            left: -65px;
+            /*eigentlich -(57 + 13), aber dann ragt das Bild raus*/
+          }
+
+          div {
+            text-align: left;
+          }
+        }
+
+        /*die links*/
+        .link {
+          display: block;
+          background-color: #2E68B9;
+          color: white;
+          height: 2.85em;
+          line-height: 2.85em;
+          position: relative;
+          width: 100%;
+
+          .link-text {
+            position: relative;
+            display: block;
+            max-width: 360px;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .indikator {
+              position: absolute;
+              right: 15px;
+            }
+          }
+
+          &:first-of-type {
+            border-bottom: 1px solid #9EB4D6;
+          }
+        }
+      }
+    }
+  }
+}

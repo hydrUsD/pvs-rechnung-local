@@ -1,0 +1,70 @@
+// Styles extracted for _stoerer.scss
+
+#stoerer {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 400px;
+  border-radius: 4px;
+  background-color: #fdc41f;
+
+  div {
+    padding: 0;
+
+    #stoerer-header {
+      border-bottom: dashed 1px #fffd58;
+      letter-spacing: 0.1em;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #stoerer-body {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    #stoerer-footer {
+      border-top: solid 1px #e3aa05;
+
+      div {
+        padding: 0;
+
+        &:not(:last-child) {
+          border-right: solid 2px white;
+        }
+      }
+
+      button {
+        background-color: rgba(255, 255, 255, 0.5);
+        font-size: inherit;
+        letter-spacing: 0.02em;
+
+        span#stoerer-mahnung {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          font-size: 85%;
+          background-color: #8d8326;
+          color: white;
+          font-weight: bold;
+          border-radius: 50%;
+          margin-right: 8px;
+          margin-left: 4px;
+        }
+
+        span.text-right-angle-bracket {
+          color: #0467b3;
+          margin-right: -5px;
+        }
+      }
+
+      :first-child button {
+        border-radius: 0px 0px 0px 4px;
+      }
+
+      :last-child button {
+        border-radius: 0px 0px 4px 0px;
+      }
+    }
+  }
+}

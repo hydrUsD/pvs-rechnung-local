@@ -1,0 +1,186 @@
+// Styles extracted for _hotlines.scss
+
+#hotlines {
+  position: relative;
+  padding-top: 20px;
+
+  #title {
+    line-height: 1em;
+    margin-bottom: 60px;
+    letter-spacing: 0.01em;
+  }
+
+  .mandant-wrapper {
+    margin-bottom: 75px;
+
+    .mandant {
+      width: 100%;
+      padding: 6px 32px;
+
+      #mandant-top {
+        height: 130px;
+        padding-left: 80px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        > div {
+          line-height: 1.2;
+        }
+
+        #name {
+          position: relative;
+          color: #2E68B9;
+          padding-bottom: 10px;
+          letter-spacing: 0.01em;
+
+          img {
+            position: absolute;
+            left: -53px;
+            top: 0px;
+          }
+        }
+
+        #adresswrapper_outer {
+          position: relative;
+          height: 100%;
+        }
+      }
+
+      .service-link {
+        text-align: center;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        display: block;
+        background-color: #2E68B9;
+        color: white;
+        letter-spacing: 0.02em;
+      }
+
+      #mandant-bottom {
+        padding-left: 80px;
+
+        > div {
+          line-height: 1;
+        }
+
+        #hotline-tag {
+          letter-spacing: 0.1em;
+          margin-top: 15px;
+        }
+
+        #hotline {
+          position: relative;
+          letter-spacing: 0.01em;
+
+          img {
+            position: absolute;
+            top: -8px;
+            left: -69px;
+          }
+        }
+
+        #hotline, #weekdays, #fridays {
+          color: #6992C4;
+        }
+
+        #weekdays, #fridays, #email {
+          font-style: italic;
+          letter-spacing: 0.02em;
+        }
+
+        #weekdays, #email {
+          margin-top: 5px;
+        }
+      }
+
+      #drilldown {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #hotlines .mandant-wrapper.lg-border-right {
+    border-right: 1px solid #C0C7CD;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #hotlines .mandant-wrapper.sm-border-right {
+    border-right: 1px solid #C0C7CD;
+  }
+}
+
+@media (max-width: 991px) {
+  #hotlines .mandant-wrapper .mandant #mandant-top #name.long_name {
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  #hotlines {
+    padding-top: 100px;
+
+    .xs-container,
+    .mandant-wrapper .mandant #mandant-bottom,
+    .mandant-wrapper .mandant #link-wrapper a,
+    #title {
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0px 32px 0px 16px;
+    }
+
+    #title {
+      text-align: left;
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+
+    .mandant-wrapper {
+      padding: 0px 0px 12px 0px;
+      margin: 0px;
+
+      .mandant {
+        margin: 0px;
+        padding: 0px;
+
+        #link-wrapper {
+          background-color: #2E68B9;
+          padding: 4px 0px;
+
+          a {
+            padding-top: 6px;
+            padding-bottom: 5px;
+            text-align: left;
+            position: relative;
+            letter-spacing: 0.1em;
+
+            #link-postfix {
+              position: absolute;
+              right: 16px;
+              top: 0px;
+              bottom: 0px;
+              margin-top: auto;
+              margin-bottom: auto;
+            }
+          }
+        }
+
+        #mandant-bottom {
+          padding-left: 60px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          #hotline img {
+            width: 35px;
+            top: 0.3em;
+            left: -47px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -99,20 +99,25 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                    <!-- Make the WAR executable -->
+                    <executable>true</executable>
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>nl.geodienstencentrum.maven</groupId>
+                <artifactId>sass-maven-plugin</artifactId>
+                <version>3.7.2</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>update-stylesheets</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                    <!-- Make the WAR executable -->
-                    <executable>true</executable>
+                    <sassSourceDirectory>${project.basedir}/src/main/resources/static/scss/</sassSourceDirectory>
+                    <destination>${project.basedir}/src/main/resources/static/css/</destination>
                 </configuration>
             </plugin>
         </plugins>

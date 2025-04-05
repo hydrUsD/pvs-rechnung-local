@@ -1,0 +1,436 @@
+// Styles extracted for _main.scss - Core layout and fundamental styles
+
+// Background color definition
+/* $background-color-light: rgba(234, 233, 233, 0.7); */
+.pvs-muted {
+  color: #848C93;
+}
+
+/* depricated */
+.blue-text {
+  color: #6992C4;
+}
+
+/* depricated */
+.text-info {
+  color: #6992C4;
+}
+
+html {
+  height: 100%;
+  font-size: inherit;
+}
+
+body {
+  /*setzt die font-size ind line-height der Website auf die Browsereinstellungen (default 16px)*/
+  font-size: inherit;
+  height: 100%;
+  font-family: ropa sans;
+  background-color: #F8F4F4;
+
+  a, button {
+    cursor: pointer;
+  }
+
+  > div {
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+    padding-bottom: 60px;
+  }
+}
+
+#background {
+  background-image: url("../patientenportal/img/background.png");
+  background-repeat: repeat-x;
+  background-position: center top;
+  background-color: #F8F4F4;
+  height: 1659px;
+}
+
+// Core layout styles for app structure
+body {
+  box-sizing: border-box;
+  background-color: #F8F4F4;
+  position: relative;
+
+  a, button {
+    cursor: pointer;
+  }
+
+  > div {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+  }
+}
+
+// Jumbotron positioning
+#jumbotron {
+  position: relative;
+
+  #stoerer-wrapper {
+    position: static;
+  }
+
+  #jumbo-background {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
+// Media queries for responsive background sizing
+@media (min-width: 1921px) {
+  #jumbotron {
+    overflow: hidden;
+
+    #jumbo-background {
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      top: -300px;
+    }
+  }
+
+  .start #header {
+    margin-top: 240px;
+  }
+
+  .start #header.noBackground {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+  #jumbotron {
+    overflow: hidden;
+
+    #jumbo-background {
+      background-position: center bottom;
+      -webkit-background-size: 1920px auto;
+      -moz-background-size: 1920px auto;
+      -o-background-size: 1920px auto;
+      background-size: 1920px auto;
+      height: 673px;
+    }
+  }
+
+  @media (max-resolution: 0.9dppx) {
+    #jumbotron #jumbo-background {
+      height: 800px;
+    }
+  }
+
+  .start #header {
+    margin-top: 240px;
+  }
+
+  .start #header.noBackground {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  #jumbotron {
+    overflow: hidden;
+
+    #jumbo-background {
+      background-position: center bottom;
+      -webkit-background-size: 1588px auto;
+      -moz-background-size: 1588px auto;
+      -o-background-size: 1588px auto;
+      background-size: 1588px auto;
+      /* 			height: 596px; */
+      height: 613px;
+      /*neue Sicht*/
+    }
+  }
+
+  @media (max-resolution: 0.9dppx) {
+    #jumbotron #jumbo-background {
+      height: 775px;
+    }
+  }
+
+  .start #header {
+    margin-top: 240px;
+  }
+
+  .start #header.noBackground {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  #jumbotron #jumbo-background {
+    background-position: center bottom;
+    -webkit-background-size: 1293px auto;
+    -moz-background-size: 1293px auto;
+    -o-background-size: 1293px auto;
+    background-size: 1293px auto;
+    height: 540px;
+  }
+
+  .start #header.original {
+    margin-bottom: 280px;
+  }
+
+  .start #header.noBackground.original {
+    margin-bottom: 250px;
+  }
+
+  .start #header.new {
+    margin-bottom: 280px;
+  }
+
+  .start #header.noBackground.new {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 525px) {
+  #jumbotron #jumbo-background {
+    background-position: center -79px;
+    -webkit-background-size: 811px auto;
+    -moz-background-size: 811px auto;
+    -o-background-size: 811px auto;
+    background-size: 811px auto;
+  }
+
+  .start #header.original {
+    margin-bottom: 206px;
+  }
+
+  .start #header.noBackground.original {
+    margin-bottom: 250px;
+  }
+
+  .start #header.new {
+    margin-bottom: 206px;
+  }
+
+  .start #header.noBackground.new {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 524px) {
+  #jumbotron #jumbo-background {
+    background-position: center -34px;
+    -webkit-background-size: 607px auto;
+    -moz-background-size: 607px auto;
+    -o-background-size: 607px auto;
+    background-size: 607px auto;
+  }
+
+  .start #header.original {
+    margin-bottom: 175px;
+  }
+
+  .start #header.noBackground.original {
+    margin-bottom: 200px;
+  }
+
+  .start #header.new {
+    margin-bottom: 175px;
+  }
+
+  .start #header.noBackground.new {
+    margin-bottom: 100px;
+  }
+
+  .start #header #urheberrecht_xs {
+    margin-bottom: 175px;
+  }
+
+  body > div {
+    padding-bottom: 83px;
+  }
+}
+
+// Bottom scroll indicator styling
+#bottomCushion {
+  position: relative;
+
+  #scroll-indicator {
+    display: none;
+
+    a {
+      display: inline-block;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2E68B9;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#scrolldown-arrow {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 40px;
+  color: #ced6dd;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  .text-right-angle-bracket {
+    display: block;
+    position: relative;
+    margin-top: -0.9rem;
+    padding-right: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 40px;
+    height: 60px;
+    border-radius: 2px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+    &::after {
+      position: absolute;
+      right: 0px;
+      top: 1px;
+      width: 0.7em;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+
+    span {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+// Flexbox utility classes
+.d-flex {
+  display: flex !important;
+}
+
+.d-row {
+  flex-direction: row !important;
+}
+
+.d-column {
+  flex-direction: column !important;
+}
+
+.d-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.d-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+// HTML/body overrides (likely to take precedence)
+html {
+  /* aus portal.css überschreiben */
+  body > div {
+    background-color: #F8F4F4;
+    background-image: url("../patientenportal/img/background.png");
+    background-repeat: repeat-x;
+    background-position: center top;
+  }
+
+  body > div {
+    padding-bottom: 0px;
+  }
+
+  #footer {
+    position: relative;
+  }
+
+  #antworten div#thema-content > form > div:not(.container) {
+    margin-bottom: 0px;
+  }
+
+  #sprache {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 1px dotted rgba(0, 0, 0, 0.5);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+    /* 		border-left: 1px dotted rgba(255,255,255,0.9); */
+    /* 		border-bottom: 1px dotted rgba(255,255,255,0.9); */
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+
+    #de {
+      display: inline-block;
+    }
+
+    #en, #es, #fr, #nl, #pl, #uk {
+      display: none;
+    }
+
+    &:hover {
+      background-color: white;
+      border-left: 1px dotted rgba(255, 255, 255, 0.5);
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+
+      #en, #es, #fr, #nl, #pl, #uk {
+        display: inline-block;
+      }
+    }
+  }
+}

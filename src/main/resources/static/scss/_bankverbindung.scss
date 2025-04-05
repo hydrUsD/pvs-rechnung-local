@@ -1,0 +1,79 @@
+// Styles extracted for _bankverbindung.scss
+
+#bankverbindung {
+  #bankname {
+    margin-top: 15px;
+  }
+
+  #white-background {
+    background-color: white;
+    padding-top: 6px;
+    padding-bottom: 30px;
+    position: relative;
+
+    #gray-background {
+      background-color: rgba(231, 230, 230, 0.6);
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      #ueberweisungshilfen {
+        #qrcode {
+          display: block;
+          width: 128px;
+          float: right;
+        }
+
+        #qrcode-title {
+          font-family: arial;
+          margin-right: 138px;
+          text-align: right;
+        }
+
+        .topic-title, #bezahlcode-title {
+          margin-top: 10px;
+          font-family: arial;
+          text-align: right;
+          margin-right: 138px;
+        }
+      }
+
+      #betreff-kopieren {
+        margin-left: 10px;
+      }
+
+      a:hover {
+        cursor: pointer;
+      }
+
+      #kontodaten {
+        border-left: 1px solid #ccc;
+      }
+
+      #fussnote {
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        margin-top: 20px;
+        font-family: arial;
+      }
+
+      #back-link {
+        display: block;
+        width: 80px;
+        margin: 0 auto;
+        background-color: white;
+        border: medium none;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #bankverbindung #white-background #gray-background #iban-kopieren {
+    position: static;
+  }
+}
